@@ -1,0 +1,53 @@
+:root {
+  --background-color: rgb(218, 214, 214);
+  --navbar-color: rgb(163, 162, 162);
+  --text-color: #191A1C;
+  --link-text-color: rgb(8, 19, 168);
+}
+
+.dark-mode {
+  --background-color: #28292b;
+  --navbar-color: rgb(77, 76, 76);
+  --text-color: whitesmoke;
+  --link-text-color: rgb(158, 151, 252);
+}
+
+#root {
+  margin: 0;
+  width: 99vw;
+  height: 98vh;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+nav {
+  background-color: var(--navbar-color); 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+nav li {
+  float: left;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+a {
+  color: var(--link-text-color);
+}
+
+.info {
+  margin-left: 3em;
+  width: 810px;
+  text-align: center;
+}
+
