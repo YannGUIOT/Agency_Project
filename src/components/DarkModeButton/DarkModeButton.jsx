@@ -1,16 +1,23 @@
 
-const DarkModeButton = () => {
+import React, { useState } from 'react';
 
-  let darkMode = false;
+const DarkModeButton = () => {
+  const [darkMode, setDarkMode] = useState(false);
 
   const changeMode = () => {
-    darkMode = !darkMode;
+    setDarkMode(!darkMode);
     root.classList.toggle("dark-mode");
-  }
+  };
 
-return (
-  <button onClick={changeMode}>Dark Mode</button>
-  )
+  return (
+    <img
+      id="slide"
+      src={`../src/assets/img/slide-${darkMode ? 0 : 1}.png`}
+      alt="slide"
+      height="24px"
+      onClick={changeMode}
+    />
+  );
 };
 
 export default DarkModeButton;

@@ -5,8 +5,10 @@ const About = () => {
 
   return (
     <div className="info">
-      <ConverterMarkdown text={about.title}/>
-      <ConverterMarkdown text={about.description}/>
+      <div className="content">
+        <ConverterMarkdown text={about.title}/>
+        <ConverterMarkdown text={about.description}/>
+      </div>
     </div>
   );
 }

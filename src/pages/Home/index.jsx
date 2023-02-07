@@ -6,8 +6,10 @@ const Home = () => {
 
   return (
     <div className="info">
-      <ConverterMarkdown text={home.title}/>
-      <ConverterMarkdown text={home.description}/>
+      <div className="content">
+        <ConverterMarkdown text={home.title}/>
+        <ConverterMarkdown text={home.description}/>
+      </div>
     </div>
   );
 }

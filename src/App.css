@@ -3,19 +3,26 @@
   --navbar-color: rgb(163, 162, 162);
   --text-color: #191A1C;
   --link-text-color: rgb(8, 19, 168);
+  --imgFilter: 0%;
 }
 
 .dark-mode {
-  --background-color: #28292b;
-  --navbar-color: rgb(77, 76, 76);
+  --background-color: #1a1b1d;
+  --navbar-color: rgb(53, 52, 52);
   --text-color: whitesmoke;
   --link-text-color: rgb(158, 151, 252);
+  --imgFilter: 80%;
 }
+
+#logo, #slide {
+  filter: invert(var(--imgFilter));
+}
+
 
 #root {
   margin: 0;
-  width: 99vw;
-  height: 98vh;
+  margin-right: 0;
+  height: 100vh;
   color: var(--text-color);
   background-color: var(--background-color);
 }
@@ -43,11 +50,50 @@ nav li {
 
 a {
   color: var(--link-text-color);
+  text-decoration: none;
 }
 
 .info {
-  margin-left: 3em;
+  margin-top: 5em;
+  width: 99vw;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content  {
+  display: flex;
+  flex-direction: column;
   width: 810px;
+  align-items: center;
+
+}
+
+body {
+  margin: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   text-align: center;
 }
 
+#slide {
+  margin-right: 1em;
+}
+
+.logo {
+  margin-top: 1em;
+}
+
+.card {
+  height: 1.3em;
+  width: 4em;
+  border: 1px solid gray;
+  border-radius: 10px;
+  /* box-shadow: 2px 2px 2px green; */
+  align-content: center;
+  margin-top: 1em;
+}
+
+#back {
+  margin-top: 3em;
+}

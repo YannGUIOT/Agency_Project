@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import React from 'react';
 import ConverterMarkdown from "../ConverterMarkdown/ConverterMarkdown";
+import {Link} from 'react-router-dom';
 
 const StudyCase = () => {
   const  {studyCaseSlug}  = useParams();
@@ -14,14 +15,19 @@ const StudyCase = () => {
   }, [studyCaseSlug])
 
   return (
-    // Vérification si currentBook est défini avant de l'afficher
+
     <div className="info">
-      {currentProject && (
-        <>
-        <ConverterMarkdown text={currentProject.title} />
-        <ConverterMarkdown text={currentProject.description} />
-        </>
-      )}
+      <div className="content">
+        {currentProject && (
+          <>
+          <ConverterMarkdown text={currentProject.title} />
+          <ConverterMarkdown text={currentProject.description} />
+          <ul>
+            <li id="back"><Link to="/works"> Back </Link></li>
+          </ul>
+          </>
+        )}
+      </div>
     </div>
   )
 

@@ -6,13 +6,15 @@ const Projets = () => {
 
 return (
   <div className="info">
-    <ConverterMarkdown text={project.title} />
-    <ConverterMarkdown text={project.description} />
-    <ul>
-        <li><Link to="/works/platon-study-case"> Platon </Link></li>
-        <li><Link to="/works/solane-study-case"> Solane </Link></li>
-        <li><Link to="/works/sedal-study-case"> Sedal </Link></li>
-    </ul>
+    <div className="content">
+      <ConverterMarkdown text={project.title} />
+      <ConverterMarkdown text={project.description} />
+      <ul>
+          <li className="card"><Link to="/works/platon-study-case"> Platon </Link></li>
+          <li className="card"><Link to="/works/solane-study-case"> Solane </Link></li>
+          <li className="card"><Link to="/works/sedal-study-case"> Sedal </Link></li>
+      </ul>
+    </div>
   </div>
 )
 
